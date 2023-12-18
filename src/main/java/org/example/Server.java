@@ -58,6 +58,8 @@ public class Server {
 
             DatagramSocket socket = new DatagramSocket(SERVER_PORT);
 
+            System.out.println("Host = " + socket.getInetAddress() + " Port = " + socket.getPort());
+
             int i = 0;
             while (true) {
                Thread.sleep(AVERAGE_DELAY);
