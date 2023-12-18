@@ -1,7 +1,7 @@
 package org.example;
 
 
-import org.apache.commons.cli.*;
+//import org.apache.commons.cli.*;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
@@ -27,7 +27,7 @@ public class Server {
 
         //Буферы для отправлемых и принимаемых данных
         byte[] receivingDataBuffer = new byte[BUFFER_SIZE];
-        CommandLineParser parser = new DefaultParser();
+       /* CommandLineParser parser = new DefaultParser();
         Options options = listOptions();
 
         try {
@@ -38,7 +38,7 @@ public class Server {
 
         }catch (ParseException e) {
             log4Me("Error: " + e);
-        }
+        }*/
 
         startServer(receivingDataBuffer);
 
@@ -96,14 +96,14 @@ public class Server {
         }
     }
 
-    private static Options listOptions() {
+    /*private static Options listOptions() {
         Options options = new Options();
 
         options.addOption("p", "ServerPort", true, "Порт сервера");
         options.addOption("size", "SizePackage", true, "Размер пакета, НЕ БОЛЕЕ 1024");
 
         return options;
-    }
+    }*/
     private static void log4Me(String log) {
         System.out.println(log);
     }
